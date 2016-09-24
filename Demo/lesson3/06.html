@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .f-text{
+            color: #fff;
+            background: #6b7980;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var input = document.getElementsByTagName("input")
+            var h1 = document.getElementsByTagName("h1")[0]
+            input[0].onkeyup = function(){
+                h1.innerHTML = "这是" + this.value.length + "位数"
+                input[1].value = "这是" + this.value.length + "位数"
+            }
+            input[1].click = function(){
+
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="text" class="f-text" value=""/><input type="button" value="是否为两位数"/>
+<h1>这是0位数</h1>
+</body>
+</html>

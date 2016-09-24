@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基础,图像,邮件,表格,链接</title>
+</head>
+// 属性背景色
+<body bgcolor="#f0ffff">
+<!--HTML所有标签注解-->
+
+<!--标题-->
+<h1>这是一个标题</h1>
+<h6><a name="C4"></a>总共有h1-h6</h6>
+
+<!--段落-->
+<p>这是一个段落</p>
+<p>这是另一个段落</p>
+
+<!--链接-->
+<a href="http://www.baidu.com">这是一个链接</a>
+
+<!--图像-->
+<p>
+    <img src="http://img5.imgtn.bdimg.com/it/u=1761975877,2518688164&fm=15&gp=0.jpg" width="125" height="200" />
+</p>
+
+<!--属性-->
+<h3 align="center">属性:居中</h3>
+
+<!--属性-->
+<table border="1"></table>
+
+<!--水平线-->
+<p>这是一个p标签</p>
+<hr />
+<p>这是一个p标签</p>
+<hr />
+<p>这是一个p标签</p>
+
+<!--折行-->
+<p>这是 <br/> 一个 <br/> 折行</p>
+
+<!--链接-->
+<a href="http://www.baidu.com" target="_blank">把链接设置为"_blank"属性,该链接会在新窗口中打开</a>
+<p>
+    <a href="#C4">跳转查看</a>
+</p>
+
+<!--发送邮件
+    mailto:邮件地址
+    subject:主题
+-->
+<a href="mailto:lafree317@163.com?subject=Hello%20again">发送邮件</a>
+<a href="mailto:someone@microsoft.com?cc=someoneelse@microsoft.com&bcc=andsomeoneelse2@microsoft.com&subject=Summer%20Party&body=You%20are%20invited%20to%20a%20big%20summer%20party!">发送邮件！</a>
+
+<!--图像-->
+<p>图像 <img src="http://www.w3school.com.cn/i/eg_cute.gif" align="bottom">在文本中</p>
+
+<p>请注意，如果您把鼠标指针移动到图像上，大多数浏览器会显示 "alt" 文本。</p>
+<img src="http://www.w3school.com.cn/i/eg_goleft.gif" alt="向左转" />
+<p>如果无法显示图像，将显示 "alt" 属性中的文本：</p>
+<img src="/i/eg_goleft123.gif" alt="向左转" />
+
+<p>
+    图片作为链接来使用:
+    <a href="http://www.baidu.com">
+        <img src="http://www.w3school.com.cn/i/eg_goleft.gif" width="50" hight="50" />
+    </a>
+</p>
+
+<map name="leimu" id="leimu">
+    <area
+            shape="circle"
+            coords="0,0,500,500"
+            href ="http://img2.imgtn.bdimg.com/it/u=121405162,4167657700&fm=11&gp=0.jpg"
+            target ="_blank"
+            alt="leimu" />
+</map>
+
+
+<table width="400" border="1" cellpadding="10" cellspacing="10" background="http://img2.imgtn.bdimg.com/it/u=121405162,4167657700&fm=11&gp=0.jpg">
+    <!--表标题-->
+    <caption>我的标题</caption>
+    <tr>
+        <!--th表头-->
+        <th>
+            Heading
+        </th>
+        <th>
+            Another Heading
+        </th>
+    </tr>
+    <tr>
+        <td>
+            row1,cell1
+        </td>
+        <td>
+            row1,cell2
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            <!--如果为空需要占位输入&nbsp;-->
+            row2,cell1
+        </td>
+        <td bgcolor="#ffc0cb">
+            row2,cell2
+        </td>
+    </tr>
+</table>
+</body>
+</html>

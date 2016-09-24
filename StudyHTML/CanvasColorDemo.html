@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100" style="border: 1px solid #c3c3c3;">
+</canvas>
+<script type="text/javascript">
+    var c = document.getElementById("myCanvas")
+    var cxt = c.getContext("2d")
+    var grd = cxt.createLinearGradient(-100,0,400,100)
+    grd.addColorStop(0,"#FF0000")
+    grd.addColorStop(1,"#0000FF")
+    cxt.fillStyle = grd
+    cxt.fillRect(0,0,200,100)
+</script>
+</body>
+</html>

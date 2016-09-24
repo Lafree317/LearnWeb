@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度输入法</title>
+    <style>
+        body,ul,li,button{
+            margin: 0;
+            padding:0;
+        }
+        body{
+            font:12px/1.5 Tahoma;
+        }
+        ul{
+            list-style-type: none;
+        }
+        button{
+            cursor: pointer;
+        }
+        #outer{
+            width:70px;
+            margin:10px auto;
+        }
+        #ime{
+            margin-top: 5px;
+            background: #fff;
+            border:1px solid #9a99ff;
+            display: none;
+        }
+        #ime li{
+            width: 100%;
+            line-height: 24px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #close{
+            border-top: 1px solid #9a99ff;
+        }
+        #ime li a{
+            color: #00c;
+            padding:0 5px;
+            display: block;
+            text-decoration: none;
+        }
+        #ime li a:hover{
+            background: #d9e1f6;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oBtn = document.getElementsByTagName("button")[0];
+            var oIme = document.getElementById("ime");
+            var oClose = document.getElementById("close");
+            var oHan = document.getElementById("hands");
+            var oPin = document.getElementById("pinyin");
+            var style = oIme.style;
+            oBtn.onclick = function(){
+                style.display = style.display == "block" ? "none" : "block";
+            };
+            oClose.onclick = function(){
+                oBtn.innerHTML = "输入法";
+                style.display = "none";
+            }
+
+            oHan.onclick = function () {
+                oBtn.innerHTML = "手写"
+                style.display = "none";
+            }
+
+            oPin.onclick = function () {
+                oBtn.innerHTML = "拼音"
+                style.display = "none"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="outer">
+        <button>输入法</button>
+        <ul id="ime">
+            <li id="hands"><a href="javascript:;">手写</a></li>
+            <li id="pinyin"><a href="javascript:;">拼音</a></li>
+            <li id="close"><a href="javascript:;">关闭</a></li>
+        </ul>
+    </div>
+</body>
+</html>
