@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+    <script>
+        window.onload = function () {
+            new Vue({
+                el:`#app`,
+                data:{
+                    todos:[
+                        { text:`1`,},
+                        { text:`2`},
+                        { text:`3`}
+                    ]
+                }
+            })
+
+            new Vue({
+                el: '#app2',
+                data: {
+                    message: 'Hello Vue.js!'
+                },
+                methods: {
+                    reverseMessage: function () {
+                        this.message = this.message.split('').reverse().join('')
+                    }
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="todo in todos">
+            {{ todo.text }}
+        </li>
+    </ul>
+</div>
+<div id="app2">
+    <p>{{ message }}</p>
+    <button v-on:click="reverseMessage">Reverse Message</button>
+</div>
+</body>
+</html>
